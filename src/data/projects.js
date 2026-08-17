@@ -20,7 +20,7 @@ export const projects = [
       "Expense approvals",
       "Responsive dashboard",
     ],
-    github: "https://github.com/Khondrevighnesh/SpendWise",
+    github: "https://spend-wise-eight-pied.vercel.app",
     live: "#",
   },
 

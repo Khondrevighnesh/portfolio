@@ -21,7 +21,7 @@ export const projects = [
       "Responsive dashboard",
     ],
     github: "https://spend-wise-eight-pied.vercel.app",
-    live: "#",
+    live: "https://spend-wise-eight-pied.vercel.app",
   },
 
   {

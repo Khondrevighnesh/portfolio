@@ -1,3 +1,4 @@
+import { ThemeProvider } from "./context/ThemeContext";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -7,14 +8,16 @@ import Contact from "./components/Contact";
 
 function App() {
   return (
-    <main className="bg-[#0A0A0A] text-white overflow-x-hidden">
-      <Navbar />
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
-    </main>
+    <ThemeProvider>
+      <main className="min-h-screen bg-[var(--bg-main)] text-[var(--text-primary)] transition-colors duration-300 relative overflow-x-hidden selection:bg-violet-600 selection:text-white">
+        <Navbar />
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <Contact />
+      </main>
+    </ThemeProvider>
   );
 }
 

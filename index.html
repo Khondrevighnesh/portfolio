@@ -1,12 +1,46 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>portfolio</title>
+    <title>Vighnesh Khondre | Full Stack MERN Developer Portfolio</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Vighnesh Khondre is a Full Stack MERN Developer specializing in building modern, scalable, and high-performance web applications with React, Node.js, Express, MongoDB, and Tailwind CSS." />
+    <meta name="keywords" content="Vighnesh Khondre, Full Stack Developer, MERN Stack, React Developer, Node.js, Web Developer Portfolio, JavaScript, TypeScript, Frontend Engineer" />
+    <meta name="author" content="Vighnesh Khondre" />
+    <meta name="theme-color" content="#090a0f" />
+
+    <!-- Open Graph / Social Meta Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Vighnesh Khondre | Full Stack MERN Developer" />
+    <meta property="og:description" content="Crafting scalable digital products, high-performance web apps, and sleek user interfaces." />
+    <meta property="og:site_name" content="Vighnesh Khondre Portfolio" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+    <!-- Prevent Theme FOUC -->
+    <script>
+      (function() {
+        try {
+          var savedTheme = localStorage.getItem('portfolio-theme');
+          var systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (savedTheme === 'dark' || (!savedTheme && systemDark) || !savedTheme) {
+            document.documentElement.classList.add('dark');
+            document.documentElement.classList.remove('light');
+          } else {
+            document.documentElement.classList.remove('dark');
+            document.documentElement.classList.add('light');
+          }
+        } catch (e) {}
+      })();
+    </script>
   </head>
-  <body>
+  <body class="antialiased selection:bg-violet-600 selection:text-white transition-colors duration-300">
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

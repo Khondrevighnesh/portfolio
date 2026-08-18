@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaArrowDown, FaCheck, FaCopy } from "react-icons/fa";
-import { Sparkles, ArrowRight, FileDown, Terminal, Code, Cpu, ShieldCheck, Zap } from "lucide-react";
+import { Sparkles, ArrowRight, FileDown, Terminal, Cpu, ShieldCheck, Zap } from "lucide-react";
 import resumeFile from "../assets/resume.pdf";
 
 export default function Hero() {

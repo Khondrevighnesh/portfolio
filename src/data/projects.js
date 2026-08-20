@@ -77,7 +77,7 @@ export const projects = [
     architecture: "Decoupled backend API with Express router, Mongoose ODM schemas with validation rules, and Firebase client SDK for rapid user verification.",
     metrics: "Instant catalog search with debounced indexing, seamless responsive layout.",
     github: "https://github.com/Khondrevighnesh",
-    live: "https://github.com/Khondrevighnesh",
+    live: "https://bookstore-2i1v.vercel.app/",
   },
   {
     id: "ecommerce-app",

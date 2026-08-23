@@ -8,7 +8,9 @@ import {
   Binary,
   Layers,
   Sparkles,
-  CheckCircle,
+  Smartphone,
+  Cloud,
+  Bot,
 } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -16,13 +18,14 @@ gsap.registerPlugin(ScrollTrigger);
 const skillCategories = [
   {
     id: "frontend",
-    title: "Frontend Engineering",
-    icon: <Code size={20} />,
+    title: "Frontend & Mobile Engineering",
+    icon: <Smartphone size={20} />,
     color: "from-cyan-500 to-blue-600",
     glow: "hover:border-cyan-500/40 hover:shadow-[0_0_30px_rgba(6,182,212,0.15)]",
-    description: "Creating responsive, animated, and stateful client applications.",
+    description: "Creating responsive, animated, and stateful web & cross-platform mobile apps.",
     skills: [
       { name: "Next.js 15 / React 19", level: 92, note: "App Router, Server Actions, SSR" },
+      { name: "React Native & Expo CLI", level: 88, note: "Mobile Workflows, Offline Drafts" },
       { name: "JavaScript (ES6+) & TypeScript", level: 90, note: "Strict Types, Async/Await, DOM" },
       { name: "Tailwind CSS", level: 95, note: "v4, Responsive, Design Tokens" },
       { name: "HTML5 / Semantic UI", level: 95, note: "SEO & Accessibility" },
@@ -32,47 +35,48 @@ const skillCategories = [
   },
   {
     id: "backend",
-    title: "Backend & APIs",
+    title: "Backend, Cloud & Databases",
     icon: <Server size={20} />,
     color: "from-violet-500 to-purple-600",
     glow: "hover:border-violet-500/40 hover:shadow-[0_0_30px_rgba(139,92,246,0.15)]",
-    description: "Developing scalable RESTful services and robust business logic.",
+    description: "Developing scalable RESTful services, media pipelines, and multi-database architectures.",
     skills: [
-      { name: "Node.js & Express.js", level: 88, note: "Event Loop, Streams, Routing" },
+      { name: "Node.js & Express.js", level: 88, note: "Event Loop, Streams, File System" },
+      { name: "AWS S3 (Presigned URLs)", level: 86, note: "Direct Upload Media Pipelines" },
+      { name: "Amazon DynamoDB", level: 82, note: "NoSQL Tables & Real-time Sync" },
       { name: "PostgreSQL & Prisma ORM", level: 86, note: "Relations, Connection Pooling, Migrations" },
       { name: "MongoDB & Mongoose", level: 85, note: "Aggregations, Schemas, Indexing" },
       { name: "Auth.js (NextAuth v5) & JWT", level: 88, note: "Edge Middleware, RBAC, Security" },
-      { name: "RESTful APIs & Server Actions", level: 90, note: "Zod Validation, Type Safety" },
+    ],
+  },
+  {
+    id: "ai",
+    title: "AI & Emerging Technologies",
+    icon: <Bot size={20} />,
+    color: "from-amber-500 to-rose-600",
+    glow: "hover:border-amber-500/40 hover:shadow-[0_0_30px_rgba(245,158,11,0.15)]",
+    description: "Next-gen agent protocols, prompt engineering, and intelligent tool orchestration.",
+    skills: [
+      { name: "Model Context Protocol (MCP)", level: 88, note: "Tool Context, Client/Server Integration" },
+      { name: "Claude Agent Skills (Claude 101)", level: 86, note: "Certified Agent Workflows" },
+      { name: "Google AI Essentials", level: 85, note: "Certified Foundations & Best Practices" },
+      { name: "Upstash Redis", level: 82, note: "Sliding-Window Rate Limiting" },
+      { name: "OpenStreetMap (OSM)", level: 85, note: "Zero-Cost Dynamic Map Embeds" },
     ],
   },
   {
     id: "tools",
-    title: "Tools, Cloud & DevOps",
-    icon: <Wrench size={20} />,
-    color: "from-pink-500 to-rose-600",
-    glow: "hover:border-pink-500/40 hover:shadow-[0_0_30px_rgba(244,63,94,0.15)]",
-    description: "Version control, testing, workflow automation, and cloud deployment.",
-    skills: [
-      { name: "Git & GitHub Actions", level: 88, note: "CI/CD, Workflows, PRs" },
-      { name: "AWS S3 & Cloud Storage", level: 84, note: "Direct Upload Pipelines, SDK" },
-      { name: "Upstash Redis", level: 82, note: "Sliding-Window Rate Limiting" },
-      { name: "Postman & API Testing", level: 86, note: "Collections, Environments" },
-      { name: "Vercel & Cloud Deploy", level: 88, note: "Edge Hosting, DNS, Secrets" },
-    ],
-  },
-  {
-    id: "languages",
-    title: "Languages & Computer Science",
+    title: "Tools, DevOps & Core CS",
     icon: <Binary size={20} />,
     color: "from-emerald-500 to-teal-600",
     glow: "hover:border-emerald-500/40 hover:shadow-[0_0_30px_rgba(16,185,129,0.15)]",
-    description: "Strong foundation in data structures, algorithms, and database systems.",
+    description: "Version control, automated pipelines, testing, and CS foundations.",
     skills: [
-      { name: "TypeScript", level: 85, note: "Types, Interfaces, Generics" },
-      { name: "SQL (PostgreSQL / MySQL)", level: 82, note: "Queries, Joins, Indexing, Pooling" },
-      { name: "JavaScript (Modern)", level: 92, note: "ESNext, Event Loop, Closures" },
-      { name: "Data Structures & Algorithms", level: 80, note: "Arrays, Trees, Graphs, Sorting" },
-      { name: "Python & C", level: 75, note: "Fundamentals, Memory, Logic" },
+      { name: "Git & GitHub Actions", level: 88, note: "CI/CD, Workflows, PRs" },
+      { name: "Postman & API Testing", level: 86, note: "API Testing, Collections, Env" },
+      { name: "Vercel & Cloud Deploy", level: 88, note: "Edge Hosting, DNS, Secrets" },
+      { name: "Data Structures & Algorithms", level: 82, note: "Arrays, Trees, Graphs, Sorting" },
+      { name: "Python & SQL", level: 80, note: "Scripting, Relational Queries & Joins" },
     ],
   },
 ];
@@ -100,7 +104,7 @@ export default function Skills() {
         },
       }
     );
-  }, []);
+  }, [selectedFilter]);
 
   const filteredCategories =
     selectedFilter === "all"
@@ -134,7 +138,7 @@ export default function Skills() {
 
           <p className="mt-4 text-slate-600 dark:text-zinc-400 text-base sm:text-lg leading-relaxed">
             A comprehensive, industry-aligned tech stack spanning frontend, backend,
-            databases, and development pipelines.
+            databases, AWS cloud, and AI agent frameworks.
           </p>
         </div>
 
@@ -142,10 +146,10 @@ export default function Skills() {
         <div className="flex flex-wrap justify-center gap-2 mb-12">
           {[
             { id: "all", label: "All Skills" },
-            { id: "frontend", label: "Frontend" },
-            { id: "backend", label: "Backend" },
+            { id: "frontend", label: "Frontend & Mobile" },
+            { id: "backend", label: "Backend & Cloud" },
+            { id: "ai", label: "AI & Agents" },
             { id: "tools", label: "Tools & DevOps" },
-            { id: "languages", label: "Languages & CS" },
           ].map((tab) => (
             <button
               key={tab.id}

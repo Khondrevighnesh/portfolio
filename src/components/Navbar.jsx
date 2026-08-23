@@ -67,11 +67,10 @@ export default function Navbar() {
         initial={{ y: -80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
             ? "glass-nav py-3.5 shadow-lg"
             : "bg-transparent py-5"
-        }`}
+          }`}
       >
         <div className="max-w-7xl mx-auto px-6 md:px-10 flex justify-between items-center">
           {/* Logo */}
@@ -90,7 +89,7 @@ export default function Navbar() {
               </span>
               <span className="text-[10px] uppercase font-semibold tracking-widest text-slate-500 dark:text-zinc-400 -mt-1 flex items-center gap-1">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 inline-block animate-pulse"></span>
-                Full Stack
+                Software Developer
               </span>
             </div>
           </div>
@@ -103,11 +102,10 @@ export default function Navbar() {
                 <button
                   key={link.id}
                   onClick={() => handleScrollTo(link.id)}
-                  className={`relative px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
-                    isActive
+                  className={`relative px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200 cursor-pointer ${isActive
                       ? "text-violet-600 dark:text-cyan-400 font-semibold"
                       : "text-slate-600 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-white"
-                  }`}
+                    }`}
                 >
                   {link.name}
                   {isActive && (
@@ -209,11 +207,10 @@ export default function Navbar() {
                     <button
                       key={link.id}
                       onClick={() => handleScrollTo(link.id)}
-                      className={`w-full text-left px-4 py-3 rounded-2xl text-base font-medium transition flex items-center justify-between ${
-                        isActive
+                      className={`w-full text-left px-4 py-3 rounded-2xl text-base font-medium transition flex items-center justify-between ${isActive
                           ? "bg-violet-500/10 dark:bg-cyan-400/10 text-violet-600 dark:text-cyan-400 font-semibold"
                           : "text-slate-700 dark:text-zinc-300 hover:bg-slate-100 dark:hover:bg-white/5"
-                      }`}
+                        }`}
                     >
                       <span>{link.name}</span>
                       {isActive && <Sparkles size={16} className="text-violet-500 dark:text-cyan-400" />}
@@ -226,7 +223,7 @@ export default function Navbar() {
               <div className="p-3 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center gap-3">
                 <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
                 <span className="text-xs font-medium text-emerald-700 dark:text-emerald-300">
-                  Available for full-time & freelance projects
+                  Software Dev @ Sustainfy Energy • Open to Roles
                 </span>
               </div>
 

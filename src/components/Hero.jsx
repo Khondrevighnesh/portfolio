@@ -48,7 +48,7 @@ export default function Hero() {
               <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
             </span>
             <span className="text-xs font-semibold uppercase tracking-wider text-slate-700 dark:text-zinc-300">
-              Available for Full-Time Roles & Projects
+              Software Dev Intern @ Sustainfy Energy • Open to Roles
             </span>
           </div>
 
@@ -61,13 +61,13 @@ export default function Hero() {
           </h1>
 
           <p className="mt-3 text-xl sm:text-2xl font-semibold text-slate-700 dark:text-zinc-200">
-            Full Stack <span className="text-violet-600 dark:text-cyan-400">MERN Developer</span> & UI Craftsman
+            Full Stack <span className="text-violet-600 dark:text-cyan-400">& Mobile Developer</span> & UI Craftsman
           </p>
 
           <p className="mt-6 text-slate-600 dark:text-zinc-400 text-base sm:text-lg leading-relaxed max-w-2xl">
-            I specialize in engineering high-performance full-stack web applications
-            with modern architecture. From scalable Node.js/MongoDB APIs to sleek,
-            fluid React interfaces with Tailwind CSS and Framer Motion.
+            I specialize in engineering high-performance full-stack web and mobile applications
+            with modern architectures. From scalable Node.js/PostgreSQL APIs and AWS S3 pipelines to sleek,
+            fluid React, Next.js 15, and React Native interfaces with Tailwind CSS and Framer Motion.
           </p>
 
           {/* CTA Buttons */}
@@ -193,27 +193,28 @@ export default function Hero() {
                   <span className="text-emerald-600 dark:text-emerald-400 font-medium">"Vighnesh Khondre"</span>,
                 </div>
                 <div className="pl-4">
-                  <span className="text-slate-500 dark:text-zinc-400">role:</span>{" "}
-                  <span className="text-emerald-600 dark:text-emerald-400 font-medium">"Full Stack MERN Developer"</span>,
+                  <span className="text-slate-500 dark:text-zinc-400">current:</span>{" "}
+                  <span className="text-emerald-600 dark:text-emerald-400 font-medium">"Software Dev Intern @ Sustainfy Energy"</span>,
                 </div>
                 <div className="pl-4">
-                  <span className="text-slate-500 dark:text-zinc-400">expertise:</span> [
+                  <span className="text-slate-500 dark:text-zinc-400">skills:</span> [
                   <span className="text-amber-600 dark:text-amber-300">"React"</span>,{" "}
+                  <span className="text-amber-600 dark:text-amber-300">"Next.js"</span>,{" "}
+                  <span className="text-amber-600 dark:text-amber-300">"React Native"</span>,{" "}
                   <span className="text-amber-600 dark:text-amber-300">"Node.js"</span>,{" "}
-                  <span className="text-amber-600 dark:text-amber-300">"MongoDB"</span>,{" "}
-                  <span className="text-amber-600 dark:text-amber-300">"Tailwind"</span>],
+                  <span className="text-amber-600 dark:text-amber-300">"AWS"</span>],
                 </div>
                 <div className="pl-4">
                   <span className="text-slate-500 dark:text-zinc-400">focus:</span>{" "}
-                  <span className="text-emerald-600 dark:text-emerald-400 font-medium">"Scalable APIs & Fluid UI/UX"</span>,
+                  <span className="text-emerald-600 dark:text-emerald-400 font-medium">"Scalable Web & Mobile Architectures"</span>,
                 </div>
                 <div className="pl-4">
                   <span className="text-slate-500 dark:text-zinc-400">status:</span>{" "}
-                  <span className="text-cyan-600 dark:text-cyan-300 font-medium">"Open for Opportunities"</span>,
+                  <span className="text-cyan-600 dark:text-cyan-300 font-medium">"Open for Full Stack / Frontend / Backend Roles"</span>,
                 </div>
                 <div className="pl-4">
                   <span className="text-slate-500 dark:text-zinc-400">build:</span> () =&gt;{" "}
-                  <span className="text-violet-600 dark:text-violet-300">"Turn ideas into scalable web apps"</span>
+                  <span className="text-violet-600 dark:text-violet-300">"Turn ideas into scalable, high-impact products"</span>
                 </div>
                 <div>&#125;;</div>
               </div>
@@ -241,7 +242,7 @@ export default function Hero() {
           {/* Floating Pill Badges */}
           <div className="absolute -top-4 -right-3 hidden sm:flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white dark:bg-[#121624] border border-slate-200 dark:border-white/15 shadow-lg text-xs font-semibold text-violet-600 dark:text-cyan-400 backdrop-blur-md">
             <Cpu size={14} />
-            <span>MERN Stack</span>
+            <span>Next.js & MERN</span>
           </div>
 
           <div className="absolute -bottom-4 -left-3 hidden sm:flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white dark:bg-[#121624] border border-slate-200 dark:border-white/15 shadow-lg text-xs font-semibold text-emerald-600 dark:text-emerald-400 backdrop-blur-md">

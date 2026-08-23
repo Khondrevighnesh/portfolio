@@ -10,6 +10,8 @@ import {
   CheckCircle2,
   Cpu,
   Compass,
+  GraduationCap,
+  Award,
 } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -37,32 +39,32 @@ export default function About() {
         },
       }
     );
-  }, []);
+  }, [activeTab]);
 
   const stats = [
     {
-      icon: <Rocket size={24} />,
-      value: "6+",
-      label: "Full Stack Projects",
-      detail: "Next.js & MERN builds",
+      icon: <Briefcase size={24} />,
+      value: "6 Mo+",
+      label: "Industry Experience",
+      detail: "Software Dev @ Sustainfy Energy",
       accent: "text-violet-600 dark:text-violet-400",
       border: "hover:border-violet-500/40",
       bgGlow: "group-hover:bg-violet-500/10",
     },
     {
-      icon: <Code2 size={24} />,
-      value: "12+",
-      label: "Modern Technologies",
-      detail: "Next.js, React, Node, SQL, TS",
+      icon: <Rocket size={24} />,
+      value: "6+",
+      label: "Full Stack & Mobile Projects",
+      detail: "Next.js 15, React Native & MERN",
       accent: "text-cyan-600 dark:text-cyan-400",
       border: "hover:border-cyan-500/40",
       bgGlow: "group-hover:bg-cyan-500/10",
     },
     {
-      icon: <Layers3 size={24} />,
-      value: "100%",
-      label: "Responsive & Accessible",
-      detail: "Cross-device perfection",
+      icon: <Code2 size={24} />,
+      value: "15+",
+      label: "Modern Technologies",
+      detail: "React, Next.js, Node, AWS, TS",
       accent: "text-indigo-600 dark:text-indigo-400",
       border: "hover:border-indigo-500/40",
       bgGlow: "group-hover:bg-indigo-500/10",
@@ -70,8 +72,8 @@ export default function About() {
     {
       icon: <Sparkles size={24} />,
       value: "100%",
-      label: "Passion & Detail",
-      detail: "Continuous innovation",
+      label: "Clean Code & Reliability",
+      detail: "Cross-platform excellence",
       accent: "text-emerald-600 dark:text-emerald-400",
       border: "hover:border-emerald-500/40",
       bgGlow: "group-hover:bg-emerald-500/10",
@@ -80,38 +82,49 @@ export default function About() {
 
   const journeyMilestones = [
     {
-      year: "2024 - Present",
-      title: "Full Stack Web Developer",
-      organization: "Production & Open Source Engineering",
+      year: "March 2026 - Present",
+      title: "Software Developer Intern",
+      organization: "Sustainfy Energy (Pune, Maharashtra)",
+      badge: "Current Role",
       description:
-        "Architecting modern full-stack web platforms including PuneStay (Next.js 15, PostgreSQL, Prisma, AWS S3, NextAuth v5), Expense Tracker, Spotify Clone, and Book Store with secure RBAC, high-speed APIs, and responsive UI.",
-      tags: ["Next.js 15", "TypeScript", "PostgreSQL", "Prisma", "React", "Node.js", "MongoDB"],
+        "Developing and maintaining features for a production React Native/Expo application supporting solar plant maintenance and technician operations. Built mobile workflows for safety checks, site visits, approvals, and photo document uploads. Architected AWS S3 presigned URL media upload pipelines, worked with Amazon DynamoDB for real-time synchronization, and integrated REST APIs with role-based access control.",
+      tags: ["React Native", "Expo", "AWS S3 (Presigned URLs)", "DynamoDB", "REST APIs", "TypeScript", "Node.js", "RBAC"],
     },
     {
-      year: "2023 - 2024",
-      title: "Frontend & UI Engineering",
-      organization: "Specialized Web Development",
+      year: "June 2025 - February 2026",
+      title: "Full-Stack Web Development Specialization",
+      organization: "Kiran Academy",
+      badge: "Professional Specialization",
       description:
-        "Mastered advanced React ecosystem, GSAP animations, Framer Motion, and Tailwind CSS. Built responsive web interfaces with sub-second page loads.",
-      tags: ["JavaScript", "Tailwind CSS", "GSAP", "REST APIs"],
+        "Mastered advanced Full-Stack JavaScript and Next.js ecosystem. Built enterprise-grade full-stack web platforms including PuneStay (Next.js 15, PostgreSQL, Prisma, AWS S3, NextAuth v5), Expense Tracker, Spotify Clone, and Book Store with secure JWT/OAuth, MongoDB aggregations, and sub-second page loads.",
+      tags: ["Next.js 15", "TypeScript", "PostgreSQL", "Prisma", "React", "Node.js", "Express.js", "MongoDB"],
     },
     {
-      year: "Academic Foundation",
-      title: "Computer Science & Engineering",
-      organization: "Degree Studies",
+      year: "2022 - May 2025",
+      title: "Bachelor of Computer Applications (BCA)",
+      organization: "Vivekananda College, Kolhapur (Shivaji University)",
+      badge: "Degree Foundation",
       description:
-        "Solid grounding in Data Structures, Algorithms, Database Management Systems (SQL & NoSQL), Object-Oriented Programming, and Software Engineering principles.",
-      tags: ["DSA", "DBMS", "Software Engineering", "OOP"],
+        "Solid grounding in Computer Science, Data Structures & Algorithms, Relational Database Management Systems (SQL & NoSQL), Object-Oriented Programming, and Software Engineering principles.",
+      tags: ["BCA", "DSA", "DBMS & SQL", "Computer Science", "Software Engineering", "OOP"],
     },
   ];
 
+  const certifications = [
+    { title: "Model Context Protocol (MCP)", issuer: "Anthropic / Agent Skills Ecosystem" },
+    { title: "Claude Agent Skill (Claude 101)", issuer: "Certificate of Completion" },
+    { title: "Introduction to Agent Skills & MCP", issuer: "Certificate of Completion" },
+    { title: "Google AI Essentials", issuer: "Google" },
+    { title: "Python Programming", issuer: "Certified Foundation" },
+  ];
+
   const coreStrengths = [
-    "Clean & modular component architecture",
-    "Robust RESTful API design & integration",
-    "Secure JWT & OAuth user authentication",
-    "Predictable state management with Redux",
-    "Database design with MongoDB & Mongoose",
-    "Smooth animations with Framer Motion & GSAP",
+    "Full-stack web applications with Next.js 15 & React 19",
+    "Cross-platform mobile apps with React Native & Expo",
+    "AWS S3 presigned URL media upload architectures",
+    "Relational (PostgreSQL/Prisma) & NoSQL (MongoDB/DynamoDB) databases",
+    "Secure authentication, NextAuth v5 & Role-Based Access Control (RBAC)",
+    "Clean REST API design, Server Actions & Zod validation",
   ];
 
   return (
@@ -140,8 +153,8 @@ export default function About() {
           </h2>
 
           <p className="mt-4 text-slate-600 dark:text-zinc-400 text-base sm:text-lg leading-relaxed">
-            A developer who bridges the gap between clean backend architecture and
-            delightful frontend experiences.
+            Software Developer building production web and mobile applications with JavaScript,
+            TypeScript, Next.js 15, React Native, Node.js, and AWS cloud services.
           </p>
         </div>
 
@@ -182,19 +195,19 @@ export default function About() {
               <div className="p-8 rounded-3xl bg-white/80 dark:bg-white/[0.03] border border-slate-200/80 dark:border-white/10 backdrop-blur-xl shadow-sm space-y-6">
                 <h3 className="text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
                   <span className="w-2 h-6 bg-gradient-to-b from-violet-600 to-cyan-500 rounded-full"></span>
-                  Crafting Scalable Full-Stack Web Apps
+                  Crafting Scalable Web & Mobile Products
                 </h3>
 
                 <p className="text-slate-600 dark:text-zinc-300 leading-relaxed text-base">
-                  I’m a passionate <strong className="text-slate-900 dark:text-white font-semibold">MERN Stack Developer</strong> based
-                  in India, dedicated to designing, building, and deploying fast, accessible,
-                  and scalable web products.
+                  I’m a passionate <strong className="text-slate-900 dark:text-white font-semibold">Software Developer</strong> based
+                  in Pune, India, dedicated to designing, building, and deploying fast, accessible,
+                  and scalable web and mobile products.
                 </p>
 
                 <p className="text-slate-600 dark:text-zinc-400 leading-relaxed text-base">
-                  Whether building secure authentication flows, structuring relational
-                  and document data models, or crafting micro-animated UI components,
-                  I take pride in writing readable, maintainable, and efficient code.
+                  Currently working as a <strong className="text-slate-900 dark:text-white font-semibold">Software Development Intern at Sustainfy Energy</strong>,
+                  where I contribute to a live React Native/Expo application across mobile frontend workflows, backend APIs,
+                  AWS S3 presigned URL pipelines, and Amazon DynamoDB.
                 </p>
 
                 {/* Core Strengths Checklist */}
@@ -217,15 +230,17 @@ export default function About() {
                   <div className="flex flex-wrap gap-2">
                     {[
                       "React 19",
-                      "Node.js",
-                      "Express.js",
-                      "MongoDB",
-                      "Tailwind CSS",
+                      "Next.js 15",
+                      "React Native",
+                      "Expo",
                       "TypeScript",
-                      "Redux Toolkit",
-                      "Framer Motion",
-                      "REST APIs",
-                      "Git/GitHub",
+                      "Node.js",
+                      "AWS S3",
+                      "Amazon DynamoDB",
+                      "PostgreSQL",
+                      "Prisma ORM",
+                      "MongoDB",
+                      "Model Context Protocol (MCP)",
                     ].map((tech) => (
                       <span
                         key={tech}
@@ -268,13 +283,18 @@ export default function About() {
             {journeyMilestones.map((milestone, index) => (
               <div
                 key={index}
-                className="relative p-7 sm:p-8 rounded-3xl bg-white/80 dark:bg-white/[0.03] border border-slate-200/80 dark:border-white/10 backdrop-blur-xl shadow-sm hover:border-violet-500/40 transition duration-300"
+                className="relative p-7 sm:p-8 rounded-3xl bg-white/80 dark:bg-white/[0.03] border border-slate-200/80 dark:border-white/10 backdrop-blur-xl shadow-sm hover:border-violet-500/40 transition duration-300 space-y-3"
               >
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
                   <div>
-                    <span className="text-xs font-semibold px-3 py-1 rounded-full bg-violet-500/10 text-violet-600 dark:text-cyan-400 border border-violet-500/20">
-                      {milestone.year}
-                    </span>
+                    <div className="flex items-center gap-2">
+                      <span className="text-xs font-semibold px-3 py-1 rounded-full bg-violet-500/10 text-violet-600 dark:text-cyan-400 border border-violet-500/20">
+                        {milestone.year}
+                      </span>
+                      <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">
+                        {milestone.badge}
+                      </span>
+                    </div>
                     <h3 className="text-xl font-bold text-slate-900 dark:text-white mt-2">
                       {milestone.title}
                     </h3>
@@ -300,6 +320,29 @@ export default function About() {
                 </div>
               </div>
             ))}
+
+            {/* Certifications Card */}
+            <div className="p-7 rounded-3xl bg-gradient-to-br from-violet-600/10 via-cyan-500/10 to-transparent border border-violet-500/20 backdrop-blur-xl space-y-4">
+              <div className="flex items-center gap-2.5 text-lg font-bold text-slate-900 dark:text-white">
+                <Award className="text-amber-500" />
+                <span>Certifications & AI Credentials</span>
+              </div>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                {certifications.map((cert, idx) => (
+                  <div
+                    key={idx}
+                    className="p-3.5 rounded-2xl bg-white/80 dark:bg-white/5 border border-slate-200 dark:border-white/10 space-y-1"
+                  >
+                    <p className="text-xs sm:text-sm font-bold text-slate-900 dark:text-white">
+                      {cert.title}
+                    </p>
+                    <p className="text-[11px] text-slate-500 dark:text-zinc-400">
+                      {cert.issuer}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         )}
       </div>

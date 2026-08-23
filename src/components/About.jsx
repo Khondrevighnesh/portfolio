@@ -42,18 +42,18 @@ export default function About() {
   const stats = [
     {
       icon: <Rocket size={24} />,
-      value: "5+",
+      value: "6+",
       label: "Full Stack Projects",
-      detail: "End-to-end MERN builds",
+      detail: "Next.js & MERN builds",
       accent: "text-violet-600 dark:text-violet-400",
       border: "hover:border-violet-500/40",
       bgGlow: "group-hover:bg-violet-500/10",
     },
     {
       icon: <Code2 size={24} />,
-      value: "10+",
+      value: "12+",
       label: "Modern Technologies",
-      detail: "React, Node, Mongo, TS",
+      detail: "Next.js, React, Node, SQL, TS",
       accent: "text-cyan-600 dark:text-cyan-400",
       border: "hover:border-cyan-500/40",
       bgGlow: "group-hover:bg-cyan-500/10",
@@ -81,11 +81,11 @@ export default function About() {
   const journeyMilestones = [
     {
       year: "2024 - Present",
-      title: "Full Stack MERN Developer",
-      organization: "Independent & Open Source Projects",
+      title: "Full Stack Web Developer",
+      organization: "Production & Open Source Engineering",
       description:
-        "Architecting full-stack web platforms including Expense Tracker, Spotify Clone, and Book Store with secure JWT/Firebase authentication, RESTful APIs, and responsive UI.",
-      tags: ["React", "Node.js", "Express", "MongoDB", "Redux"],
+        "Architecting modern full-stack web platforms including PuneStay (Next.js 15, PostgreSQL, Prisma, AWS S3, NextAuth v5), Expense Tracker, Spotify Clone, and Book Store with secure RBAC, high-speed APIs, and responsive UI.",
+      tags: ["Next.js 15", "TypeScript", "PostgreSQL", "Prisma", "React", "Node.js", "MongoDB"],
     },
     {
       year: "2023 - 2024",

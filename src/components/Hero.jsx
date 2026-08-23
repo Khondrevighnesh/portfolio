@@ -144,12 +144,12 @@ export default function Hero() {
           {/* Quick Stats Grid */}
           <div className="grid grid-cols-3 gap-4 sm:gap-6 mt-12 pt-8 border-t border-slate-200 dark:border-white/10">
             <div className="p-4 rounded-2xl bg-white/60 dark:bg-white/[0.02] border border-slate-200/60 dark:border-white/5 backdrop-blur-sm">
-              <h3 className="text-2xl sm:text-3xl font-extrabold text-violet-600 dark:text-cyan-400">5+</h3>
+              <h3 className="text-2xl sm:text-3xl font-extrabold text-violet-600 dark:text-cyan-400">6+</h3>
               <p className="text-slate-600 dark:text-zinc-400 text-xs sm:text-sm font-medium mt-0.5">Production Projects</p>
             </div>
             <div className="p-4 rounded-2xl bg-white/60 dark:bg-white/[0.02] border border-slate-200/60 dark:border-white/5 backdrop-blur-sm">
-              <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">MERN</h3>
-              <p className="text-slate-600 dark:text-zinc-400 text-xs sm:text-sm font-medium mt-0.5">Full Stack Stack</p>
+              <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">Full Stack</h3>
+              <p className="text-slate-600 dark:text-zinc-400 text-xs sm:text-sm font-medium mt-0.5">Next.js & MERN</p>
             </div>
             <div className="p-4 rounded-2xl bg-white/60 dark:bg-white/[0.02] border border-slate-200/60 dark:border-white/5 backdrop-blur-sm">
               <h3 className="text-2xl sm:text-3xl font-extrabold text-emerald-600 dark:text-emerald-400">100%</h3>

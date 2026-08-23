@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaArrowDown, FaCheck, FaCopy } from "react-icons/fa";
 import { Sparkles, ArrowRight, FileDown, Terminal, Cpu, ShieldCheck, Zap } from "lucide-react";
-import resumeFile from "../assets/resume.pdf";
+import resumeFile from "../assets/vighneshresume2026.pdf";
 
 export default function Hero() {
   const [copied, setCopied] = useState(false);

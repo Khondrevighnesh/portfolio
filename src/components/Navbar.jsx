@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Sun, Moon, Menu, X, FileDown, Sparkles } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { useTheme } from "../context/ThemeContext";
-import resumeFile from "../assets/resume.pdf";
+import resumeFile from "../assets/vighneshresume2026.pdf";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);

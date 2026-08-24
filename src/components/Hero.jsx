@@ -26,14 +26,14 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center pt-32 pb-20 px-6 md:px-10 overflow-hidden"
+      className="relative min-h-screen flex items-center pt-32 pb-20 px-4 sm:px-6 lg:px-8 xl:px-10 overflow-hidden"
     >
       {/* Dynamic Ambient Background Glows */}
       <div className="absolute -top-20 left-1/4 w-[500px] h-[500px] bg-violet-600/10 dark:bg-violet-600/15 blur-[140px] rounded-full pointer-events-none -z-10 animate-pulse-glow"></div>
       <div className="absolute top-1/3 right-10 w-[450px] h-[450px] bg-cyan-500/10 dark:bg-cyan-500/15 blur-[130px] rounded-full pointer-events-none -z-10"></div>
       <div className="absolute -bottom-10 left-10 w-[350px] h-[350px] bg-indigo-500/10 dark:bg-indigo-500/15 blur-[120px] rounded-full pointer-events-none -z-10"></div>
 
-      <div className="max-w-7xl mx-auto w-full grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      <div className="max-w-[1440px] mx-auto w-full grid lg:grid-cols-12 gap-10 lg:gap-12 xl:gap-16 items-center">
         {/* Left Content */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}

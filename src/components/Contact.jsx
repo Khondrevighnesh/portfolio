@@ -96,13 +96,13 @@ export default function Contact() {
     <section
       id="contact"
       ref={sectionRef}
-      className="relative pt-28 pb-12 px-6 md:px-10 overflow-hidden"
+      className="relative pt-28 pb-12 px-4 sm:px-6 lg:px-8 xl:px-10 overflow-hidden"
     >
       {/* Background Ambience */}
       <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-violet-600/10 dark:bg-violet-600/15 blur-[140px] rounded-full pointer-events-none -z-10"></div>
       <div className="absolute bottom-10 left-10 w-80 h-80 bg-cyan-500/10 dark:bg-cyan-500/15 blur-[130px] rounded-full pointer-events-none -z-10"></div>
 
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-[1440px] mx-auto">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 contact-fade-in">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-violet-500/10 border border-violet-500/20 text-violet-600 dark:text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-4">

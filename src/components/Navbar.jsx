@@ -14,6 +14,7 @@ export default function Navbar() {
   const links = [
     { name: "About", id: "about" },
     { name: "Skills", id: "skills" },
+    { name: "Experience", id: "experience" },
     { name: "Projects", id: "projects" },
     { name: "Contact", id: "contact" },
   ];
@@ -22,7 +23,7 @@ export default function Navbar() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 25);
 
-      const sections = ["hero", "about", "skills", "projects", "contact"];
+      const sections = ["hero", "about", "skills", "experience", "projects", "contact"];
       const scrollPosition = window.scrollY + 200;
 
       for (const sectionId of sections) {
@@ -72,7 +73,7 @@ export default function Navbar() {
             : "bg-transparent py-5"
           }`}
       >
-        <div className="max-w-7xl mx-auto px-6 md:px-10 flex justify-between items-center">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 flex justify-between items-center">
           {/* Logo */}
           <div
             onClick={() => handleScrollTo("hero")}
